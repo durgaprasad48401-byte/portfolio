@@ -1,12 +1,6 @@
 import { Reveal } from '@/components/reveal'
 import { SectionLabel } from '@/components/section-label'
 
-const facts = [
-  { value: '3+', label: 'Full-stack projects shipped' },
-  { value: '10k+', label: 'Text records processed' },
-  { value: '75%', label: 'Paperwork reduced in intern work' },
-]
-
 export function About() {
   return (
     <section id="about" className="relative py-20 md:py-28">
@@ -15,7 +9,7 @@ export function About() {
           <SectionLabel>ABOUT</SectionLabel>
         </Reveal>
 
-        <div className="mt-8 grid grid-cols-1 gap-12 lg:grid-cols-[1fr_0.7fr] lg:gap-16">
+        <div className="mt-8 max-w-3xl">
           <Reveal delay={0.05}>
             <h2 className="font-display text-3xl leading-tight tracking-tight text-balance sm:text-4xl">
               I like the part where messy data becomes a{' '}
@@ -36,24 +30,6 @@ export function About() {
                 useful. I&apos;m especially drawn to AI, automation, and cloud
                 technologies.
               </p>
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.12}>
-            <div className="grid gap-4">
-              {facts.map((f) => (
-                <div
-                  key={f.label}
-                  className="rounded-2xl border border-border bg-card p-6 shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-lift"
-                >
-                  <div className="font-display text-4xl text-gradient">
-                    {f.value}
-                  </div>
-                  <p className="mt-1.5 text-sm text-muted-foreground">
-                    {f.label}
-                  </p>
-                </div>
-              ))}
             </div>
           </Reveal>
         </div>
