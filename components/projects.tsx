@@ -20,38 +20,43 @@ type Project = {
 }
 
 const projects: Project[] = [
+  // ==========================================
+  // DURGA STORE
+  // ==========================================
   {
-<<<<<<< HEAD
-  name: 'Durga Store',
-  tag: 'Web Development',
-  featured: true,
-  image: '/durga-store.png',
+    name: 'Durga Store',
+    tag: 'Web Development',
+    featured: true,
+    image: '/durga-store.png',
 
-  description:
-    'A full-stack e-commerce web application built with HTML, CSS, JavaScript, Node.js, Express, and MySQL. Features dynamic product loading, REST API integration, category filtering, search, shopping cart management, and checkout functionality.',
+    description:
+      'A full-stack e-commerce web application built with HTML, CSS, JavaScript, Node.js, Express, and MySQL. Features dynamic product loading, REST API integration, category filtering, search, shopping cart management, and checkout functionality.',
 
-  stack: [
-    'HTML',
-    'CSS',
-    'JavaScript',
-    'Node.js',
-    'Express',
-    'MySQL',
-  ],
+    stack: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'Node.js',
+      'Express',
+      'MySQL',
+    ],
 
-  metrics: [
-    { value: '6+', label: 'products' },
-    { value: '4', label: 'categories' },
-    { value: 'Live', label: 'deployment' },
-  ],
+    metrics: [
+      { value: '6+', label: 'products' },
+      { value: '4', label: 'categories' },
+      { value: 'Live', label: 'deployment' },
+    ],
 
-  liveUrl:
-    'https://durga-store-production.up.railway.app/',
+    liveUrl:
+      'https://durga-store-production.up.railway.app/',
 
-  githubUrl:
-    'https://github.com/durgaprasad48401-byte/durga-store',
-},
+    githubUrl:
+      'https://github.com/durgaprasad48401-byte/durga-store',
+  },
 
+  // ==========================================
+  // AI RESUME SCREENING
+  // ==========================================
   {
     name: 'AI Resume Screening System',
     tag: 'AI / NLP',
@@ -74,6 +79,9 @@ const projects: Project[] = [
     ],
   },
 
+  // ==========================================
+  // BUS MANAGEMENT SYSTEM
+  // ==========================================
   {
     name: 'Bus Management System',
     tag: 'Databases',
@@ -92,55 +100,19 @@ const projects: Project[] = [
       { value: 'MySQL', label: 'database' },
       { value: 'CRUD', label: 'operations' },
       { value: '3', label: 'user roles' },
-=======
-    name: 'AI Resume Screening System',
-    tag: 'AI / NLP',
-    featured: true,
-    description:
-      'An NLP-driven screening engine that analyzes and ranks candidates using TF-IDF and cosine similarity, automating skill extraction and generating ranked reports in seconds.',
-    stack: ['Python', 'Flask', 'Pandas', 'Scikit-learn', 'NumPy'],
-    metrics: [
-      { value: '90%', label: 'match accuracy' },
-      { value: '200+', label: 'resumes analyzed' },
-      { value: '70%', label: 'less manual time' },
-    ],
-  },
-  {
-    name: 'Bus Management System',
-    tag: 'Databases',
-    description:
-      'A relational platform managing student records, bookings, and routes with role-based access for admins, students, and drivers.',
-    stack: ['MySQL', 'HTML', 'CSS', 'JavaScript'],
-    metrics: [
-      { value: '8+', label: 'tables designed' },
-      { value: '600+', label: 'student records' },
-      { value: '35%', label: 'faster retrieval' },
-    ],
-  },
-  {
-    name: 'E-Commerce Web App',
-    tag: 'Full-stack',
-    description:
-      'A full-stack shopping experience with product browsing, cart management, order processing, and role-based access across admin and customer users.',
-    stack: ['Node.js', 'Express', 'MySQL', 'JavaScript'],
-    metrics: [
-      { value: '10+', label: 'REST APIs' },
-      { value: '500+', label: 'records managed' },
-      { value: '2', label: 'user roles' },
->>>>>>> c5147ce6d2de09bb34a5ee51cd835ff439b7a4ab
     ],
   },
 ]
 
 export function Projects() {
   return (
-<<<<<<< HEAD
     <section
       id="work"
       className="relative py-20 md:py-28"
     >
       <div className="mx-auto max-w-6xl px-5 md:px-8">
 
+        {/* Section Header */}
         <Reveal>
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
@@ -148,14 +120,6 @@ export function Projects() {
                 FEATURED PROJECTS
               </SectionLabel>
 
-=======
-    <section id="work" className="relative py-20 md:py-28">
-      <div className="mx-auto max-w-6xl px-5 md:px-8">
-        <Reveal>
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <SectionLabel>FEATURED PROJECTS</SectionLabel>
->>>>>>> c5147ce6d2de09bb34a5ee51cd835ff439b7a4ab
               <h2 className="mt-6 max-w-2xl font-display text-3xl leading-tight tracking-tight text-balance sm:text-4xl">
                 Things I&apos;ve designed, built, and shipped
               </h2>
@@ -163,8 +127,8 @@ export function Projects() {
           </div>
         </Reveal>
 
+        {/* Projects Grid */}
         <div className="mt-12 grid grid-cols-1 gap-5 lg:grid-cols-6">
-<<<<<<< HEAD
           {projects.map((project, index) => (
             <ProjectCard
               key={project.name}
@@ -174,12 +138,6 @@ export function Projects() {
           ))}
         </div>
 
-=======
-          {projects.map((p, i) => (
-            <ProjectCard key={p.name} project={p} index={i} />
-          ))}
-        </div>
->>>>>>> c5147ce6d2de09bb34a5ee51cd835ff439b7a4ab
       </div>
     </section>
   )
@@ -192,7 +150,6 @@ function ProjectCard({
   project: Project
   index: number
 }) {
-<<<<<<< HEAD
   const span = project.featured
     ? 'lg:col-span-6'
     : 'lg:col-span-3'
@@ -204,40 +161,27 @@ function ProjectCard({
     >
       <article
         className={`group relative flex h-full flex-col overflow-hidden rounded-3xl transition-all duration-300 hover:-translate-y-1 ${
-=======
-  // Asymmetric layout: featured spans full width, others split
-  const span = project.featured ? 'lg:col-span-6' : 'lg:col-span-3'
-
-  return (
-    <Reveal delay={index * 0.08} className={span}>
-      <article
-        className={`group relative flex h-full flex-col overflow-hidden rounded-3xl p-7 transition-all duration-300 hover:-translate-y-1 md:p-8 ${
->>>>>>> c5147ce6d2de09bb34a5ee51cd835ff439b7a4ab
           project.featured
             ? 'gradient-border shadow-lift'
             : 'border border-border bg-card shadow-soft hover:shadow-lift'
         }`}
       >
-<<<<<<< HEAD
 
         {/* Project Image */}
-
         {project.image && (
           <div className="relative overflow-hidden border-b border-border">
             <img
-  src={project.image}
-  alt={`${project.name} project preview`}
-  className="block h-64 w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02] md:h-80"
-/>
+              src={project.image}
+              alt={`${project.name} project preview`}
+              className="block h-72 w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02] md:h-96"
+            />
           </div>
         )}
 
         {/* Card Content */}
-
         <div className="relative flex flex-1 flex-col p-7 md:p-8">
 
           {/* Featured Glow */}
-
           {project.featured && (
             <div
               aria-hidden="true"
@@ -246,7 +190,6 @@ function ProjectCard({
           )}
 
           {/* Project Header */}
-
           <div className="relative flex items-center justify-between">
 
             <span className="font-mono text-xs uppercase tracking-[0.16em] text-accent">
@@ -263,7 +206,6 @@ function ProjectCard({
           </div>
 
           {/* Project Information */}
-
           <div
             className={`relative mt-6 flex flex-1 flex-col ${
               project.featured
@@ -272,6 +214,7 @@ function ProjectCard({
             }`}
           >
 
+            {/* Project Name */}
             <h3
               className={`font-display tracking-tight text-balance ${
                 project.featured
@@ -282,12 +225,12 @@ function ProjectCard({
               {project.name}
             </h3>
 
+            {/* Description */}
             <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground text-pretty">
               {project.description}
             </p>
 
             {/* Technologies */}
-
             <ul className="mt-6 flex flex-wrap gap-2">
               {project.stack.map((technology) => (
                 <li
@@ -300,33 +243,29 @@ function ProjectCard({
             </ul>
 
             {/* Metrics */}
+            {project.metrics && project.metrics.length > 0 && (
+              <div className="mt-7 grid grid-cols-3 gap-3 border-t border-border pt-6">
 
-            {project.metrics &&
-              project.metrics.length > 0 && (
-                <div className="mt-7 grid grid-cols-3 gap-3 border-t border-border pt-6">
-
-                  {project.metrics.map((metric) => (
-                    <div key={metric.label}>
-
-                      <div className="font-display text-lg tracking-tight sm:text-xl">
-                        {metric.value}
-                      </div>
-
-                      <div className="mt-1 font-mono text-[10px] uppercase tracking-wide text-muted-foreground sm:text-xs">
-                        {metric.label}
-                      </div>
-
+                {project.metrics.map((metric) => (
+                  <div key={metric.label}>
+                    <div className="font-display text-lg tracking-tight sm:text-xl">
+                      {metric.value}
                     </div>
-                  ))}
 
-                </div>
-              )}
+                    <div className="mt-1 font-mono text-[10px] uppercase tracking-wide text-muted-foreground sm:text-xs">
+                      {metric.label}
+                    </div>
+                  </div>
+                ))}
 
-            {/* Links */}
+              </div>
+            )}
 
+            {/* Project Links */}
             {(project.liveUrl || project.githubUrl) && (
               <div className="mt-8 flex flex-wrap gap-3">
 
+                {/* Live Demo */}
                 {project.liveUrl && (
                   <a
                     href={project.liveUrl}
@@ -344,6 +283,7 @@ function ProjectCard({
                   </a>
                 )}
 
+                {/* GitHub */}
                 {project.githubUrl && (
                   <a
                     href={project.githubUrl}
@@ -365,62 +305,9 @@ function ProjectCard({
             )}
 
           </div>
-
         </div>
 
       </article>
     </Reveal>
   )
 }
-=======
-        {project.featured && (
-          <div
-            aria-hidden="true"
-            className="glow-blue pointer-events-none absolute -right-24 -top-24 h-72 w-72 opacity-60"
-          />
-        )}
-
-        <div className="relative flex items-center justify-between">
-          <span className="font-mono text-xs uppercase tracking-[0.16em] text-accent">
-            {project.tag}
-          </span>
-          <span className="grid h-10 w-10 place-items-center rounded-full border border-border bg-background text-muted-foreground transition-all group-hover:border-accent group-hover:text-accent">
-            <ArrowUpRight
-              size={18}
-              className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-            />
-          </span>
-        </div>
-
-        <div
-          className={`relative mt-6 flex flex-1 flex-col ${
-            project.featured ? 'lg:max-w-2xl' : ''
-          }`}
-        >
-          <h3
-            className={`font-display tracking-tight text-balance ${
-              project.featured ? 'text-2xl sm:text-3xl' : 'text-xl sm:text-2xl'
-            }`}
-          >
-            {project.name}
-          </h3>
-          <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground text-pretty">
-            {project.description}
-          </p>
-
-          <ul className="mt-6 flex flex-wrap gap-2">
-            {project.stack.map((s) => (
-              <li
-                key={s}
-                className="rounded-full border border-border bg-background px-3 py-1 font-mono text-xs text-muted-foreground"
-              >
-                {s}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </article>
-    </Reveal>
-  )
-}
->>>>>>> c5147ce6d2de09bb34a5ee51cd835ff439b7a4ab
