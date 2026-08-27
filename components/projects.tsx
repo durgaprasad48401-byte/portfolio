@@ -40,16 +40,18 @@ const projects: Project[] = [
   },
   {
     name: 'E-Commerce Web App',
-    tag: 'Full-stack',
+    tag: 'Web Development',
     description:
-      'A full-stack shopping experience with product browsing, cart management, order processing, and role-based access across admin and customer users.',
-    stack: ['Node.js', 'Express', 'MySQL', 'JavaScript'],
+        'A full-stack e-commerce web application featuring responsive design, dynamic products, category filtering, search, shopping cart, and checkout functionality.',
+    stack: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Express', 'MySQL'],
     metrics: [
-      { value: '10+', label: 'REST APIs' },
-      { value: '500+', label: 'records managed' },
-      { value: '2', label: 'user roles' },
+        { value: '6+', label: 'products' },
+        { value: '4', label: 'categories' },
+        { value: '1', label: 'live deployment' },
     ],
-  },
+    liveUrl: 'https://durga-store-production.up.railway.app/',
+    githubUrl: 'https://github.com/durgaprasad8401-byte/durga-store',
+},
 ]
 
 export function Projects() {
