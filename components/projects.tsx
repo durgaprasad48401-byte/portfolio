@@ -10,7 +10,6 @@ type Project = {
   featured?: boolean
   description: string
   stack: string[]
-  metrics: { value: string; label: string }[]
 }
 
 const projects: Project[] = [
@@ -142,23 +141,6 @@ function ProjectCard({
               </li>
             ))}
           </ul>
-
-          <div
-            className={`mt-auto grid grid-cols-3 gap-4 pt-8 ${
-              project.featured ? 'max-w-md' : ''
-            }`}
-          >
-            {project.metrics.map((m) => (
-              <div key={m.label} className="border-l border-border pl-3">
-                <div className="font-display text-xl text-gradient sm:text-2xl">
-                  {m.value}
-                </div>
-                <div className="mt-0.5 text-xs leading-snug text-muted-foreground">
-                  {m.label}
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </article>
     </Reveal>
